@@ -3,22 +3,22 @@ package edu.itacademy.secondtask.model;
 
 public class Car {
     private int carId;
-    private CarBrand carBrand;
-    private CarModel carModel;
-    private int carModelYear;
-    private double carPrice;
-    private String carRegistrationNumber;
+    private CarBrand brand;
+    private CarModel model;
+    private int modelYear;
+    private double price;
+    private String registrationNumber;
 
     public Car() {
     }
 
-    public Car(int carId, CarBrand carBrand, CarModel carModel, int carModelYear, double CarPrice, String carRegistrationNumber) {
+    public Car(int carId, CarBrand brand, CarModel model, int modelYear, double price, String registrationNumber) {
         this.carId = carId;
-        this.carBrand = carBrand;
-        this.carModel = carModel;
-        this.carModelYear = carModelYear;
-        this.carPrice = CarPrice;
-        this.carRegistrationNumber = carRegistrationNumber;
+        this.brand = brand;
+        this.model = model;
+        this.modelYear = modelYear;
+        this.price = price;
+        this.registrationNumber = registrationNumber;
     }
 
     public int getCarId() {
@@ -30,54 +30,54 @@ public class Car {
     }
 
     public CarBrand getBrand() {
-        return carBrand;
+        return brand;
     }
 
     public void setBrand(CarBrand carBrand) {
-        this.carBrand = carBrand;
+        this.brand = carBrand;
     }
 
     public CarModel getModel() {
-        return carModel;
+        return model;
     }
 
     public void setModel(CarModel carModel) {
-        this.carModel = carModel;
+        this.model = carModel;
     }
 
-    public int getCarModelYear() {
-        return carModelYear;
+    public int getModelYear() {
+        return modelYear;
     }
 
-    public void setCarModelYear(int carModelYear) {
-        this.carModelYear = carModelYear;
+    public void setModelYear(int modelYear) {
+        this.modelYear = modelYear;
     }
 
-    public double getCarPrice() {
-        return carPrice;
+    public double getPrice() {
+        return price;
     }
 
-    public void setCarPrice(double carPrice) {
-        this.carPrice = carPrice;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public String getCarRegistrationNumber() {
-        return carRegistrationNumber;
+    public String getRegistrationNumber() {
+        return registrationNumber;
     }
 
-    public void setCarRegistrationNumber(String carRegistrationNumber) {
-        this.carRegistrationNumber = carRegistrationNumber;
+    public void setRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
     }
 
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Car{");
         sb.append("id=").append(carId);
-        sb.append(", brand=").append(carModel.getBrand());
-        sb.append(", model=").append(carModel.getModelName());
-        sb.append(", modelYear=").append(carModelYear);
-        sb.append(", price=").append(Math.round(carPrice));
-        sb.append(", registrationNumber=").append(carRegistrationNumber);
+        sb.append(", brand=").append(model.getBrand());
+        sb.append(", model=").append(model.getModelName());
+        sb.append(", modelYear=").append(modelYear);
+        sb.append(", price=").append(Math.round(price));
+        sb.append(", registrationNumber=").append(registrationNumber);
         sb.append('}');
         return sb.toString();
     }

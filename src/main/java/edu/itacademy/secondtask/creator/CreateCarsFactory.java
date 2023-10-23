@@ -24,12 +24,12 @@ public class CreateCarsFactory {
             CarModel currentCarModel = carModels[modelRandom];
             car.setModel(currentCarModel);
             int modelYearRandom = random.nextInt(1990,2023);
-            car.setCarModelYear(modelYearRandom);
+            car.setModelYear(modelYearRandom);
             double priceRandom = random.nextDouble(5000.00,15000.45);
-            car.setCarPrice(priceRandom);
+            car.setPrice(priceRandom);
             int registrationNumberRandom = random.nextInt(100,999);
             String registrationNumberLetter = "BY";
-            car.setCarRegistrationNumber(registrationNumberRandom+registrationNumberLetter+ registrationNumberRandom);
+            car.setRegistrationNumber(registrationNumberRandom+registrationNumberLetter+ registrationNumberRandom);
             cars[i] = car;
         }
         return cars;
