@@ -2,8 +2,7 @@ package edu.itacademy.secondtask.main;
 
 import edu.itacademy.secondtask.creator.CreateCarsFactory;
 import edu.itacademy.secondtask.model.Car;
-import edu.itacademy.secondtask.services.FindCarsByPrice;
-import edu.itacademy.secondtask.services.FindCarsInYears;
+import edu.itacademy.secondtask.service.FindCars;
 
 
 public class CarProject {
@@ -14,13 +13,13 @@ public class CarProject {
         }
         System.out.println("__________");
 
-        Car[] filteredByYearCars = FindCarsInYears.findCarsInYearsService(cars, 1992, 2023);
+        Car[] filteredByYearCars = FindCars.findCarsInYearsService(cars, 1992, 2023);
         for (Car filteredByYearCar : filteredByYearCars) {
             System.out.println(filteredByYearCar);
         }
         System.out.println("__________");
 
-        Car[] filteredByPrice = FindCarsByPrice.findCarsByPriceService(cars, 5000, 15000);
+        Car[] filteredByPrice = FindCars.findCarsByPriceService(cars, 5000, 15000);
         for (Car car : filteredByPrice) {
             System.out.println(car);
         }
